@@ -65,11 +65,11 @@
 
         nav {
             bindings = <
-&trans           &trans         &trans     &trans          &trans            &trans        &trans                                          &trans    &kp RIGHT_ARROW  &trans  &trans  &trans  &trans  &trans
-&kp EXCLAMATION  &trans         &trans     &trans          &trans            &kp QUESTION  &trans                                          &kp UP    &kp LEFT_ARROW   &trans  &trans  &trans  &trans  &trans
-&kp HASH         &kp AT_SIGN    &kp EQUAL  &kp UNDERSCORE  &kp DOLLAR        &kp ASTERISK  &trans      &trans  &trans      &trans  &trans  &kp DOWN  &trans           &trans  &trans  &trans  &trans  &trans
-&kp TILDE        &kp LESS_THAN  &kp PIPE   &kp MINUS       &kp GREATER_THAN  &kp PLUS                          &trans      &trans                    &trans           &trans  &trans  &trans  &trans  &trans
-&trans           &kp AMPERSAND  &trans     &trans          &trans                          &caps_word  &trans  &trans      &trans  &trans  &trans                     &trans  &trans  &trans  &trans  &trans
+&trans           &trans         &trans     &trans          &trans            &trans        &trans                                          &trans  &trans    &trans     &trans  &trans  &trans  &trans
+&kp EXCLAMATION  &trans         &trans     &trans          &trans            &kp QUESTION  &trans                                          &trans  &trans    &kp RIGHT  &trans  &trans  &trans  &trans
+&kp HASH         &kp AT_SIGN    &kp EQUAL  &kp UNDERSCORE  &kp DOLLAR        &kp ASTERISK  &trans      &trans  &trans      &trans  &trans  &trans  &kp UP    &kp LEFT   &trans  &trans  &trans  &trans
+&kp TILDE        &kp LESS_THAN  &kp PIPE   &kp MINUS       &kp GREATER_THAN  &kp PLUS                          &trans      &trans                  &kp DOWN  &trans     &trans  &trans  &trans  &trans
+&trans           &kp AMPERSAND  &trans     &trans          &trans                          &caps_word  &trans  &trans      &trans  &trans  &trans            &trans     &trans  &trans  &trans  &trans
             >;
 
             label = "Nav";
