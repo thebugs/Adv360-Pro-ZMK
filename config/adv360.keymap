@@ -55,21 +55,21 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp ESC    &kp N1             &kp N2        &kp N3                &kp N4                 &kp N5     &tog 2                                                                              &mo 5  &kp N6  &kp N7            &kp N8            &kp N9        &kp N0              &kp DELETE
-&kp ESC    &kp Q              &kp Y         &kp O                 &kp U                  &kp EQUAL  &none                                                                               &none  &kp X   &kp L             &kp D             &kp P         &kp Z               &kp ENTER
-&kp B      &hrl LEFT_SHIFT C  &hrl LCTRL I  &hrl LEFT_ALT A       &hrl LEFT_GUI E        &kp MINUS  &none      &kp LCTRL  &mo 2         &mo 3                 &sk LS(LA(LC(LEFT_GUI)))  &none  &kp K   &hrr RIGHT_GUI H  &hrr RIGHT_ALT T  &hrr RCTRL N  &hrr RIGHT_SHIFT S  &kp W
-&sk LSHFT  &kp APOS           &kp COMMA     &kp DOT               &kp SEMI               &kp FSLH                         &tog 4        &sk LS(LA(LEFT_GUI))                                   &kp J   &kp M             &kp G             &kp F         &kp V               &sk RSHFT
-&mo 3      &kp AMPS           &kp GRAVE     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS             &kp SPACE  &kp TAB    &kp LGUI      &lt 1 ENTER           &kp BSPC                  &kp R          &sk RSHFT         &kp LBKT          &kp RBKT      &kp BACKSLASH       &mo 1
+&tog 4     &kp N1             &kp N2        &kp N3                &kp N4                 &kp N5     &tog 2                                                                                 &mo 5    &kp N6  &kp N7            &kp N8            &kp N9        &kp N0              &kp DELETE
+&kp ESC    &kp Q              &kp Y         &kp O                 &kp U                  &kp EQUAL  &none                                                                                  &none    &kp X   &kp L             &kp D             &kp P         &kp Z               &kp ENTER
+&kp B      &hrl LEFT_SHIFT C  &hrl LCTRL I  &hrl LEFT_ALT A       &hrl LEFT_GUI E        &kp MINUS  &none      &sk LS(LA(LC(LEFT_GUI)))  &sk LS(LA(LEFT_GUI))      &kp DELETE   &kp ENTER  &none    &kp K   &hrr RIGHT_GUI H  &hrr RIGHT_ALT T  &hrr RCTRL N  &hrr RIGHT_SHIFT S  &kp W
+&sk LSHFT  &kp APOS           &kp COMMA     &kp DOT               &kp SEMI               &kp FSLH                                        &sk LS(LA(LCTRL))         &kp ESCAPE                       &kp J   &kp M             &kp G             &kp F         &kp V               &sk RSHFT
+&mo 3      &kp AMPS           &kp GRAVE     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS             &kp SPACE  &kp TAB                   &kp LGUI                  &lt 1 ENTER  &kp BSPC   &lt 1 R          &sk RSHFT         &kp LBKT          &kp RBKT      &kp BACKSLASH       &mo 3
             >;
         };
 
         nav {
             bindings = <
-&trans           &trans         &trans     &trans          &trans            &trans        &trans                                          &trans  &trans    &trans     &trans  &trans  &trans  &trans
-&kp EXCLAMATION  &trans         &trans     &trans          &trans            &kp QUESTION  &trans                                          &trans  &trans    &kp RIGHT  &trans  &trans  &trans  &trans
-&kp HASH         &kp AT_SIGN    &kp EQUAL  &kp UNDERSCORE  &kp DOLLAR        &kp ASTERISK  &trans      &trans  &trans      &trans  &trans  &trans  &kp UP    &kp LEFT   &trans  &trans  &trans  &trans
-&kp TILDE        &kp LESS_THAN  &kp PIPE   &kp MINUS       &kp GREATER_THAN  &kp PLUS                          &trans      &trans                  &kp DOWN  &trans     &trans  &trans  &trans  &trans
-&trans           &kp AMPERSAND  &trans     &trans          &trans                          &caps_word  &trans  &trans      &trans  &trans  &trans            &trans     &trans  &trans  &trans  &trans
+&trans           &kp GRAVE         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SEMICOLON      &kp COMMA     &trans                                                    &trans  &trans    &trans             &trans            &trans     &trans         &trans
+&kp EXCLAMATION  &kp LEFT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp RIGHT_BRACKET  &kp QUESTION  &trans                                                    &trans  &trans    &kp RIGHT          &trans            &trans     &trans         &trans
+&kp HASH         &kp CARET         &kp EQUAL             &kp UNDERSCORE         &kp DOLLAR         &kp ASTERISK  &trans       &caps_word  &trans           &trans  &trans  &trans  &kp UP    &kp LEFT           &trans            &trans     &trans         &trans
+&kp TILDE        &kp LESS_THAN     &kp PIPE              &kp MINUS              &kp GREATER_THAN   &kp SLASH                              &trans           &trans                  &kp DOWN  &kp DOUBLE_QUOTES  &kp SINGLE_QUOTE  &kp GRAVE  &kp BACKSLASH  &trans
+&trans           &kp AMPERSAND     &kp SINGLE_QUOTE      &kp DOUBLE_QUOTES      &kp PLUS                         &kp PERCENT  &kp COLON   &kp AT_SIGN      &trans  &trans  &trans            &trans             &trans            &trans     &trans         &trans
             >;
 
             label = "Nav";
