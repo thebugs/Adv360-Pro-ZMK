@@ -103,7 +103,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp C   &kp I   &kp A   &kp E   &trans  &trans  &trans  &trans      &trans     &trans  &trans  &trans  &kp H   &kp T   &kp N   &kp S   &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &kp ENTER  &trans  &trans          &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &kp ENTER  &trans  &kp R           &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Yellow";
