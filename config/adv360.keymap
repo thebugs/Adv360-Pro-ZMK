@@ -55,11 +55,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&tog 4     &kp N1             &kp N2        &kp N3                &kp N4                 &kp N5     &tog 2                                                                                &mo 5    &kp N6  &kp N7            &kp N8            &kp N9        &kp N0              &kp LC(C)
-&kp ESC    &kp Q              &kp Y         &kp O                 &kp U                  &kp EQUAL  &none                                                                                 &none    &kp X   &kp L             &kp D             &kp P         &kp Z               &kp ENTER
-&kp B      &hrl LEFT_SHIFT C  &hrl LCTRL I  &hrl LEFT_ALT A       &hrl LEFT_GUI E        &kp MINUS  &none        &sk LS(LA(LC(LEFT_GUI)))  &sk LEFT_GUI           &kp DELETE   &kp ENTER  &none    &kp K   &hrr RIGHT_GUI H  &hrr RIGHT_ALT T  &hrr RCTRL N  &hrr RIGHT_SHIFT S  &kp W
-&sk LSHFT  &kp APOS           &kp COMMA     &kp DOT               &kp SEMI               &kp FSLH                                          &sk LS(LA(LCTRL))      &kp ESCAPE                       &kp J   &kp M             &kp G             &kp F         &kp V               &sk RSHFT
-&mo 3      &kp AMPS           &kp GRAVE     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS             &lt 1 SPACE  &lt 2 TAB                 &kp ENTER              &lt 1 ENTER  &kp BSPC   &lt 1 R          &sk RSHFT         &kp LBKT          &kp RBKT      &kp BACKSLASH       &mo 3
+&tog 4     &kp N1             &kp N2        &kp N3                &kp N4                 &kp N5     &tog 2                                                                              &mo 5    &kp N6  &kp N7            &kp N8            &kp N9        &kp N0              &kp LC(C)
+&kp ESC    &kp Q              &kp Y         &kp O                 &kp U                  &kp EQUAL  &none                                                                               &none    &kp X   &kp L             &kp D             &kp P         &kp Z               &kp ENTER
+&kp B      &hrl LEFT_SHIFT C  &hrl LCTRL I  &hrl LEFT_ALT A       &hrl LEFT_GUI E        &kp MINUS  &none      &sk LS(LA(LC(LEFT_GUI)))  &sk LEFT_GUI           &kp DELETE   &kp ENTER  &none    &kp K   &hrr RIGHT_GUI H  &hrr RIGHT_ALT T  &hrr RCTRL N  &hrr RIGHT_SHIFT S  &kp W
+&sk LSHFT  &kp APOS           &kp COMMA     &kp DOT               &kp SEMI               &kp FSLH                                        &sk LS(LA(LCTRL))      &kp ESCAPE                       &kp J   &kp M             &kp G             &kp F         &kp V               &sk RSHFT
+&mo 3      &kp AMPS           &kp GRAVE     &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS             &kp SPACE  &lt 2 TAB                 &lt 1 ENTER            &lt 1 ENTER  &kp BSPC   &lt 1 R          &sk RSHFT         &kp LBKT          &kp RBKT      &kp BACKSLASH       &mo 3
             >;
         };
 
