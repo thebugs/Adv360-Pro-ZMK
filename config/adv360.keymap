@@ -59,7 +59,7 @@
 &gresc     &kp Q              &kp Y         &kp O            &kp U            &kp EQUAL  &none                                                                               &none    &kp X   &kp L             &kp D             &kp P         &kp Z               &kp ENTER
 &kp B      &hrl LEFT_SHIFT C  &hrl LCTRL I  &hrl LEFT_ALT A  &hrl LEFT_GUI E  &kp MINUS  &none      &sk LS(LA(LC(LEFT_GUI)))  &sk LEFT_GUI           &kp DELETE   &kp ENTER  &none    &kp K   &hrr RIGHT_GUI H  &hrr RIGHT_ALT T  &hrr RCTRL N  &hrr RIGHT_SHIFT S  &kp W
 &sk LSHFT  &kp APOS           &kp COMMA     &kp DOT          &kp SEMI         &kp FSLH                                        &lt 1 ENTER            &kp ESCAPE                       &kp J   &kp M             &kp G             &kp F         &kp V               &sk RSHFT
-&mo 3      &kp AMPS           &kp GRAVE     &kp LEFT         &kp RIGHT                   &kp SPACE  &lt 2 TAB                 &sk LS(LA(LCTRL))      &lt 1 ENTER  &kp BSPC   &lt 1 R          &kp UP            &kp DOWN          &kp AMPS      &kp BACKSLASH       &mo 3
+&mo 3      &kp AMPS           &kp GRAVE     &kp LEFT         &kp RIGHT                   &kp SPACE  &lt 2 TAB                 &sk LS(LA(LCTRL))      &lt 1 ENTER  &kp BSPC   &lt 1 R          &kp DOWN          &kp UP            &kp AMPS      &kp BACKSLASH       &mo 3
             >;
         };
 
