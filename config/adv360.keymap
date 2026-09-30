@@ -59,7 +59,7 @@
 &gresc     &kp Q              &kp Y         &kp O            &kp U            &kp EQUAL  &none                                                                               &none    &kp X   &kp L             &kp D             &kp P         &kp Z               &kp ENTER
 &kp B      &hrl LEFT_SHIFT C  &hrl LCTRL I  &hrl LEFT_ALT A  &hrl LEFT_GUI E  &kp MINUS  &none      &sk LS(LA(LC(LEFT_GUI)))  &sk LEFT_GUI           &kp DELETE   &kp ENTER  &none    &kp K   &hrr RIGHT_GUI H  &hrr RIGHT_ALT T  &hrr RCTRL N  &hrr RIGHT_SHIFT S  &kp W
 &sk LSHFT  &kp APOS           &kp COMMA     &kp DOT          &kp SEMI         &kp FSLH                                        &lt 1 ENTER            &kp ESCAPE                       &kp J   &kp M             &kp G             &kp F         &kp V               &sk RSHFT
-&mo 3      &kp AMPS           &kp GRAVE     &kp LEFT         &kp RIGHT                   &kp SPACE  &lt 2 TAB                 &sk LS(LA(LCTRL))      &lt 1 ENTER  &kp BSPC   &lt 1 R          &kp DOWN          &kp UP            &kp AMPS      &kp BACKSLASH       &mo 3
+&mo 3      &kp AMPS           &kp GRAVE     &kp BACKSLASH    &kp PLUS                    &kp SPACE  &lt 2 TAB                 &sk LS(LA(LCTRL))      &lt 1 ENTER  &kp BSPC   &lt 1 R          &kp LEFT          &kp DOWN          &kp UP        &kp RIGHT           &mo 3
             >;
         };
 
@@ -89,11 +89,11 @@
         fn {
             display-name = "Fn";
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &none                                       &none   &kp F7             &kp F8           &kp F9             &kp F10   &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans             &kp C_NEXT       &trans             &kp C_PP  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &kp C_VOLUME_UP    &kp C_PREV       &trans             &trans    &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &kp C_VOLUME_DOWN  &kp K_MUTE       &trans             &trans    &trans   &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans                     &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &trans    &trans   &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6  &none                                       &none   &kp F7             &kp F8      &kp F9             &kp F10          &kp F11     &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans  &none                                       &none   &trans             &kp C_NEXT  &trans             &kp C_PP         &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &none   &trans  &trans      &trans  &trans  &none   &kp C_VOLUME_UP    &kp C_PREV  &trans             &trans           &trans      &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                  &kp C_VOLUME_DOWN  &kp K_MUTE  &trans             &trans           &trans      &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &trans  &trans  &trans                     &kp C_PREV  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &trans
             >;
         };
 
@@ -101,9 +101,9 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                                         &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp C   &kp I   &kp A   &kp E   &trans  &trans  &trans  &trans      &trans     &trans  &trans  &trans  &kp H   &kp T   &kp N   &kp S   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans                     &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans      &kp ENTER  &trans  &kp R           &trans  &trans  &trans  &trans  &trans
+&trans  &kp C   &kp I   &kp A   &kp E   &trans  &trans  &trans  &trans         &trans  &trans  &trans  &trans  &kp H   &kp T   &kp N   &kp S   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &kp ENTER      &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans          &trans  &trans  &trans         &trans  &trans  &kp R           &trans  &trans  &trans  &trans  &trans
             >;
 
             label = "Yellow";
