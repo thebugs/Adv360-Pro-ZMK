@@ -535,6 +535,14 @@
             tap-ms = <0>;
             bindings = <&macro_release>, <&kp LSHFT>, <&kp RSHFT>, <&kp LALT>, <&kp RALT>, <&kp LCTRL>, <&kp RCTRL>, <&kp LGUI>, <&kp RGUI>, <&macro_tap>, <&kp S>, <&macro_tap>, <&macro_param_1to1>, <&kp A>;
         };
+
+        numword_exit: numword_exit {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            wait-ms = <0>;
+            tap-ms = <0>;
+            bindings = <&macro_tap>, <&macro_param_1to1>, <&kp A>, <&macro_tap>, <&tog 15>;
+        };
     };
 
     keymap {
@@ -543,7 +551,7 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&tog 4                      &kp N1                      &kp N2                      &kp N3                      &kp N4                      &kp N5                      &tog 2                      &mo 5                       &kp N6                      &kp N7                      &kp N8                      &kp N9                      &kp N0                      &kp LC(C)
+&tog 4                      &kp N1                      &kp N2                      &kp N3                      &kp N4                      &kp N5                      &tog 15                     &mo 5                       &kp N6                      &kp N7                      &kp N8                      &kp N9                      &kp N0                      &kp LC(C)
 &gresc                      &kp Q                       &kp Y                       &kp O                       &kp U                       &kp EQUAL                   &tog 14                     &none                       &kp X                       &kp L                       &kp D                       &kp P                       &kp Z                       &kp ENTER
 &kp B                       &hrm_l_pinky LEFT_SHIFT C   &hrm_l_ring LCTRL I         &hrm_l_middle LEFT_ALT A    &hrm_l_index LEFT_GUI E     &kp MINUS                   &mo 14                      &sk LS(LA(LC(LEFT_GUI)))    &sk LEFT_GUI                &kp DELETE                  &kp SPACE                   &none                       &kp K                       &hrm_r_index RIGHT_GUI H    &hrm_r_middle RIGHT_ALT T   &hrm_r_ring RCTRL N         &hrm_r_pinky RIGHT_SHIFT S  &kp W
 &sk LSHFT                   &kp APOS                    &kp COMMA                   &kp DOT                     &kp SEMI                    &kp FSLH                    &kp ENTER                   &kp ESCAPE                  &kp J                       &kp M                       &kp G                       &kp F                       &kp V                       &sk RSHFT
@@ -703,6 +711,17 @@
                 &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &mmv MOVE_UP     &mmv MOVE_LEFT   &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans           &trans
                 &trans           &trans           &trans           &trans           &trans           &trans           &mkp MCLK        &trans           &mmv MOVE_DOWN   &trans           &msc SCRL_DOWN   &trans           &trans           &trans
                 &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &mkp RCLK        &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
+            >;
+        };
+
+        numword {
+            display-name = "NumWord";
+            bindings = <
+                &trans                   &kp N1                   &kp N2                   &kp N3                   &kp N4                   &kp N5                   &trans                   &trans                   &kp N6                   &kp N7                   &kp EQUAL                &kp FSLH                 &kp STAR                 &numword_exit LC(C)
+                &trans                   &numword_exit Q          &numword_exit Y          &numword_exit O          &numword_exit U          &kp EQUAL                &trans                   &trans                   &numword_exit X          &kp N7                   &kp N8                   &kp N9                   &kp MINUS                &numword_exit ENTER
+                &numword_exit B          &numword_exit C          &numword_exit I          &numword_exit A          &numword_exit E          &kp MINUS                &trans                   &trans                   &trans                   &kp DELETE               &numword_exit SPACE      &trans                   &numword_exit K          &kp N4                   &kp N5                   &kp N6                   &kp PLUS                 &numword_exit W
+                &trans                   &numword_exit APOS       &kp COMMA                &kp DOT                  &numword_exit SEMI       &kp FSLH                 &numword_exit ENTER      &numword_exit ESCAPE     &numword_exit J          &kp N1                   &kp N2                   &kp N3                   &numword_exit V          &trans
+                &trans                   &numword_exit AMPS       &numword_exit GRAVE      &numword_exit BACKSLASH  &kp PLUS                 &numword_exit SPACE      &numword_exit TAB        &trans                   &numword_exit ENTER      &kp BSPC                 &kp N0                   &numword_exit LEFT       &numword_exit DOWN       &kp DOT                  &numword_exit RIGHT      &trans
             >;
         };
     };

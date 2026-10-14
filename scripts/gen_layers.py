@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Regenerate bilateral home row mods (BHRM) in config/adv360.keymap.
+"""Regenerate layers derived from the base layer in config/adv360.keymap.
 
-Port of sunaku's Glorious Engrammer BHRM (also used by TailorKey).
+Bilateral home row mods (BHRM), port of sunaku's Glorious Engrammer BHRM (also used by TailorKey).
 
 Base layer HRM keys must be bound as `&hrm_<l|r>_<index|middle|ring|pinky> MOD KEY`.
 From those the script (re)writes:
@@ -10,8 +10,13 @@ From those the script (re)writes:
   - hrm_<h>_<f>_hold/_tap  macros
   - finger_<h>_<f>         finger layers, regenerated in place (appended on first run)
 
+NumWord, plain ZMK take on urob's num-word: toggle the `numword` layer on, digits and
+number punctuation keep it on, any other key is typed and turns it off.
+  - numword                layer, regenerated in place (appended on first run)
+  - numword_exit           macro typing a key and toggling numword off
+
 Run after changing base layer keys or HRM timings in Keymap Editor:
-    python3 scripts/gen_bhrm.py [path/to/adv360.keymap]
+    python3 scripts/gen_layers.py [path/to/adv360.keymap]
 """
 
 import re
@@ -46,6 +51,21 @@ DEFAULTS = {
 }
 DEFAULT_COMMON = {"flavor": '"tap-preferred"', "quick-tap-ms": 300, "require-prior-idle-ms": 150}
 ALL_MODS = "<&kp LSHFT>, <&kp RSHFT>, <&kp LALT>, <&kp RALT>, <&kp LCTRL>, <&kp RCTRL>, <&kp LGUI>, <&kp RGUI>"
+
+NUMWORD_LAYER = "numword"
+# Right hand numpad, same spots as on the Kp layer
+NUMWORD_KEYS = {
+    10: "EQUAL", 11: "FSLH", 12: "STAR",
+    23: "N7", 24: "N8", 25: "N9", 26: "MINUS",
+    41: "N4", 42: "N5", 43: "N6", 44: "PLUS",
+    55: "N1", 56: "N2", 57: "N3",
+    70: "N0", 73: "DOT",
+}
+# Base layer keys that keep NumWord on, other keys exit it
+NUMWORD_CONTINUE = {
+    *(f"N{i}" for i in range(10)),
+    "DOT", "COMMA", "MINUS", "PLUS", "STAR", "FSLH", "EQUAL", "COLON", "BSPC", "DELETE", "DEL",
+}
 
 HRM_RE = re.compile(r"^&hrm_([lr])_(index|middle|ring|pinky)\s+(\S+)\s+(\S+)$")
 GENERATED_NODE_RE = re.compile(r"^hrm_[lr]_(index|middle|ring|pinky)(_(index|middle|ring|pinky|hold|tap))?$")
@@ -139,6 +159,74 @@ def format_layer(bindings):
     return "\n".join(rows)
 
 
+def append_to(text, block, content):
+    _, _, close = root_block(text, block)
+    insert_at = text.rfind("}", 0, close)
+    insert_at = text.rfind("\n", 0, insert_at) + 1
+    return text[:insert_at] + "\n" + content + "\n" + text[insert_at:]
+
+
+def remove_nodes(text, block, labels):
+    b = root_block(text, block)
+    removals = [(start, end) for name, label, start, _, end in children(text, b[1], b[2]) if (label or name) in labels]
+    for start, end in sorted(removals, reverse=True):
+        stop = end + 1 if text[end:end + 1] == "\n" else end
+        text = text[:start] + text[stop:]
+    return text
+
+
+def layer_node(name, display, bindings):
+    body = "\n".join("                " + line for line in format_layer(bindings).splitlines())
+    return (
+        f"        {name} {{\n"
+        f'            display-name = "{display}";\n'
+        f"            bindings = <\n{body}\n            >;\n"
+        f"        }};"
+    )
+
+
+def numword(text):
+    _, km_open, km_close = root_block(text, "keymap")
+    layers = list(children(text, km_open, km_close))
+    names = [layer[0] for layer in layers]
+    base = split_bindings(text[layers[0][3]:layers[0][4]])
+    index = names.index(NUMWORD_LAYER) if NUMWORD_LAYER in names else len(names)
+
+    # Hold-taps with &kp as tap (&lt, HRMs, thumbs) exit with their tap key
+    tap_behaviors = {"lt"} | {
+        m.group(1) for m in re.finditer(r"(\w+)\s*:\s*[\w-]+\s*\{[^{}]*?bindings\s*=\s*<[^>]*>\s*,\s*<&kp>\s*;", text)
+    }
+    bindings = []
+    for pos, binding in enumerate(base):
+        parts = binding.split()
+        key = None
+        if pos in NUMWORD_KEYS:
+            key = NUMWORD_KEYS[pos]
+        elif parts[0] == "&kp" and len(parts) == 2:
+            key = parts[1]
+        elif parts[0][1:] in tap_behaviors and len(parts) == 3:
+            key = parts[2]
+        if key is None:
+            bindings.append("&trans")
+        elif pos in NUMWORD_KEYS or key in NUMWORD_CONTINUE:
+            bindings.append(f"&kp {key}")
+        else:
+            bindings.append(f"&numword_exit {key}")
+
+    node = layer_node(NUMWORD_LAYER, "NumWord", bindings)
+    if NUMWORD_LAYER in names:
+        _, _, start, _, end = layers[index]
+        text = text[:start] + node + text[end:]
+    else:
+        text = append_to(text, "keymap", node)
+
+    text = remove_nodes(text, "macros", {"numword_exit"})
+    return append_to(text, "macros", macro(
+        "numword_exit",
+        f"<&macro_tap>, <&macro_param_1to1>, <&kp A>, <&macro_tap>, <&tog {index}>",
+    ))
+
+
 def main():
     text = KEYMAP.read_text()
 
@@ -220,13 +308,7 @@ def main():
             layer_bindings[other_hrm["pos"]] = f"&{chord} {other_hrm['mod']} {other_hrm['key']}"
 
         display = f"{'L' if hand == 'l' else 'R'}{finger.capitalize()}"
-        body = "\n".join("                " + line for line in format_layer(layer_bindings).splitlines())
-        finger_layers.append(
-            f"        finger_{hand}_{finger} {{\n"
-            f'            display-name = "{display}";\n'
-            f"            bindings = <\n{body}\n            >;\n"
-            f"        }};"
-        )
+        finger_layers.append(layer_node(f"finger_{hand}_{finger}", display, layer_bindings))
 
     # Finger layers are replaced in place so layers after them keep their indexes
     if finger_idx:
@@ -246,12 +328,6 @@ def main():
         stop = end + 1 if text[end:end + 1] == "\n" else end
         text = text[:start] + text[stop:]
 
-    def append_to(text, block, content):
-        _, _, close = root_block(text, block)
-        insert_at = text.rfind("}", 0, close)
-        insert_at = text.rfind("\n", 0, insert_at) + 1
-        return text[:insert_at] + "\n" + content + "\n" + text[insert_at:]
-
     text = append_to(text, "behaviors", "\n\n".join(behaviors))
     if not root_block(text, "macros"):
         _, _, bh_close = root_block(text, "behaviors")
@@ -259,6 +335,7 @@ def main():
     text = append_to(text, "macros", "\n\n".join(macros))
     if not finger_idx:
         text = append_to(text, "keymap", "\n\n".join(finger_layers))
+    text = numword(text)
     text = re.sub(r"\{\n\n+", "{\n", text)
     text = re.sub(r"\n\n+(\s*\};)", r"\n\1", text)
     text = re.sub(r"\n[ \t]*\n([ \t]*\n)+", "\n\n", text)

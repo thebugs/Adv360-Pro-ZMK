@@ -22,7 +22,7 @@ Home row mods use sunaku's bilateral HRM scheme (as in Glorious Engrammer / Tail
 Base layer HRM keys are bound as `&hrm_<l|r>_<index|middle|ring|pinky> MOD KEY`. After changing base layer keys, or HRM timings on the `hrm_<l|r>_<finger>` behaviors, regenerate the rest:
 
 ```
-python3 scripts/gen_bhrm.py
+python3 scripts/gen_layers.py
 ```
 
 The `finger_*` layers must stay next to each other; other layers can go before or after them. Layers after them (e.g. Mouse) take priority, so their keys win over finger layers.

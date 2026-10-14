@@ -35,12 +35,13 @@ left:
 		zmk
 	git checkout config/version.dtsi
 
-# Keymap drawing, finger_* layers (bilateral HRM internals) are skipped
+# Keymap drawing, finger_* layers (bilateral HRM internals) are skipped, NumWord exit keys blanked
 DRAWER := uvx --from keymap-drawer==0.23.0 keymap -c keymap_drawer.config.yaml
 
 draw:
 	mkdir -p keymap-drawer
-	$(DRAWER) parse -z config/adv360.keymap > keymap-drawer/adv360.yaml
+	$(DRAWER) parse -z config/adv360.keymap \
+		| sed -E "s/'&numword_exit [^']*'/{t: '', type: trans}/" > keymap-drawer/adv360.yaml
 	$(DRAWER) draw keymap-drawer/adv360.yaml -z adv360 \
 		-s $$(sed -nE 's/^  ([A-Za-z0-9_]+):$$/\1/p' keymap-drawer/adv360.yaml | grep -vE '^[LR](Index|Middle|Ring|Pinky)$$') \
 		> keymap-drawer/adv360.svg
