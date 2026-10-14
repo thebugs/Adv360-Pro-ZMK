@@ -9,6 +9,18 @@
 
 Certain ZMK features (e.g. combos) require knowing the exact key positions in the matrix. They can be found in both image and text format [here](assets/key-positions.md)
 
+### Bilateral home row mods
+
+Home row mods use sunaku's bilateral HRM scheme (as in Glorious Engrammer / TailorKey). Holding a home row mod activates a per-finger layer (`finger_*`, always the last layers) where same-hand keys type normally instead of being modded, and other same-hand home keys stack mods. Same-side thumbs count as same hand.
+
+Base layer HRM keys are bound as `&hrm_<l|r>_<index|middle|ring|pinky> MOD KEY`. After changing base layer keys, or HRM timings on the `hrm_<l|r>_<finger>` behaviors, regenerate the rest:
+
+```
+python3 scripts/gen_bhrm.py
+```
+
+New layers added in the keymap editor must be moved above the `finger_*` layers.
+
 ## Building the Firmware with GitHub Actions
 
 ### Setup
