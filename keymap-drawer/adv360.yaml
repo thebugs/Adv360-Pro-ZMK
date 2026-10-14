@@ -1,0 +1,1080 @@
+layout: {zmk_keyboard: adv360}
+layers:
+  Base:
+  - {t: Yellow, h: toggle}
+  - '1'
+  - '2'
+  - '3'
+  - '4'
+  - '5'
+  - {t: Kp, h: toggle}
+  - Mod
+  - '6'
+  - '7'
+  - '8'
+  - '9'
+  - '0'
+  - ⌃C
+  - {t: Esc, s: '`'}
+  - Q
+  - Y
+  - O
+  - U
+  - '='
+  - ''
+  - ''
+  - X
+  - L
+  - D
+  - P
+  - Z
+  - ⏎
+  - B
+  - {t: C, h: ⇧}
+  - {t: I, h: ⌃}
+  - {t: A, h: ⌥}
+  - {t: E, h: ⌘}
+  - '-'
+  - ''
+  - {t: Hyper, h: sticky}
+  - {t: ⌘, h: sticky}
+  - ⌦
+  - ␣
+  - ''
+  - K
+  - {t: H, h: ⌘}
+  - {t: T, h: ⌥}
+  - {t: N, h: ⌃}
+  - {t: S, h: ⇧}
+  - W
+  - {t: ⇧, h: sticky}
+  - ''''
+  - ','
+  - .
+  - ;
+  - /
+  - ⏎
+  - Esc
+  - J
+  - M
+  - G
+  - F
+  - V
+  - {t: ⇧, h: sticky}
+  - Fn
+  - '&'
+  - '`'
+  - \
+  - +
+  - {t: ␣, h: Nav}
+  - {t: ⇥, h: Kp}
+  - {t: Meh, h: sticky}
+  - ⏎
+  - {t: ⌫, h: Kp}
+  - {t: R, h: Nav}
+  - ←
+  - ↓
+  - ↑
+  - →
+  - Fn
+  Nav:
+  - {t: ▽, type: trans}
+  - '`'
+  - (
+  - )
+  - ;
+  - ','
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '!'
+  - '['
+  - '{'
+  - '}'
+  - ']'
+  - '?'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - →
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '#'
+  - ^
+  - '='
+  - _
+  - $
+  - '*'
+  - {t: ▽, type: trans}
+  - Caps word
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ↑
+  - ←
+  - (
+  - )
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '~'
+  - <
+  - '|'
+  - '-'
+  - '>'
+  - /
+  - .
+  - {t: ▽, type: trans}
+  - ↓
+  - '"'
+  - ''''
+  - '`'
+  - \
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&'
+  - ''''
+  - '"'
+  - +
+  - {t: '%', type: held}
+  - ':'
+  - '@'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Kp:
+  - {t: ▽, type: trans}
+  - ⌘⇧3
+  - ⌘⇧4
+  - ⌃⌘⇧4
+  - ⌘⇧5
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - NumLk
+  - '='
+  - /
+  - '*'
+  - {t: ▽, type: trans}
+  - ⌘`
+  - ⌘W
+  - ⌘⇧[
+  - ⌘⇧]
+  - ⌘T
+  - ⌘F
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - '7'
+  - '8'
+  - '9'
+  - '-'
+  - {t: ▽, type: trans}
+  - ⌘A
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ⌘S
+  - ''
+  - ⌃
+  - ⌥
+  - ⌘
+  - ⌃
+  - ''
+  - {t: ▽, type: trans}
+  - '4'
+  - '5'
+  - '6'
+  - +
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ⌘Z
+  - ⌘X
+  - ⌘C
+  - ⌘V
+  - ⌘⇧Z
+  - Home
+  - PgUp
+  - {t: ▽, type: trans}
+  - '1'
+  - '2'
+  - '3'
+  - ⏎
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ⇪
+  - ←
+  - →
+  - ⌫
+  - {t: ⌦, type: held}
+  - End
+  - PgDn
+  - ⏎
+  - '0'
+  - ↑
+  - ↓
+  - .
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Fn:
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
+  - ''
+  - ''
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - ''
+  - {t: ▽, type: trans}
+  - ⏭
+  - {t: ▽, type: trans}
+  - ⏯
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ''
+  - Vol+
+  - ⏮
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Vol−
+  - Mute
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ⏮
+  - Vol−
+  - Vol+
+  - ⏭
+  - {t: ▽, type: trans}
+  Yellow:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - C
+  - I
+  - A
+  - E
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - H
+  - T
+  - N
+  - S
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - ⏎
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - R
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  Mod:
+  - ''
+  - {t: BT, h: '0'}
+  - {t: BT, h: '1'}
+  - {t: BT, h: '2'}
+  - {t: BT, h: '3'}
+  - {t: BT, h: '4'}
+  - ''
+  - {type: held}
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Boot
+  - Boot
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Studio unlock
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - BT CLR
+  - ''
+  - '&stp STP_BAT'
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - Version
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - '&bl BL_TOG'
+  - RGB TOG
+  - '&bl BL_INC'
+  - '&bl BL_DEC'
+  - ''
+  - ''
+  - ''
+  LIndex:
+  - {t: ▽, type: trans}
+  - '&hrm_l_index_tap N1'
+  - '&hrm_l_index_tap N2'
+  - '&hrm_l_index_tap N3'
+  - '&hrm_l_index_tap N4'
+  - '&hrm_l_index_tap N5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_index_tap Q'
+  - '&hrm_l_index_tap Y'
+  - '&hrm_l_index_tap O'
+  - '&hrm_l_index_tap U'
+  - '&hrm_l_index_tap EQUAL'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_index_tap B'
+  - {t: '&hrm_l_index_tap C', h: ⇧}
+  - {t: '&hrm_l_index_tap I', h: ⌃}
+  - {t: '&hrm_l_index_tap A', h: ⌥}
+  - ''
+  - '&hrm_l_index_tap MINUS'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_index_tap APOS'
+  - '&hrm_l_index_tap COMMA'
+  - '&hrm_l_index_tap DOT'
+  - '&hrm_l_index_tap SEMI'
+  - '&hrm_l_index_tap FSLH'
+  - '&hrm_l_index_tap ENTER'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_index_tap AMPS'
+  - '&hrm_l_index_tap GRAVE'
+  - '&hrm_l_index_tap BACKSLASH'
+  - '&hrm_l_index_tap PLUS'
+  - Nav
+  - Kp
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  LMiddle:
+  - {t: ▽, type: trans}
+  - '&hrm_l_middle_tap N1'
+  - '&hrm_l_middle_tap N2'
+  - '&hrm_l_middle_tap N3'
+  - '&hrm_l_middle_tap N4'
+  - '&hrm_l_middle_tap N5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_middle_tap Q'
+  - '&hrm_l_middle_tap Y'
+  - '&hrm_l_middle_tap O'
+  - '&hrm_l_middle_tap U'
+  - '&hrm_l_middle_tap EQUAL'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_middle_tap B'
+  - {t: '&hrm_l_middle_tap C', h: ⇧}
+  - {t: '&hrm_l_middle_tap I', h: ⌃}
+  - ''
+  - {t: '&hrm_l_middle_tap E', h: ⌘}
+  - '&hrm_l_middle_tap MINUS'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_middle_tap APOS'
+  - '&hrm_l_middle_tap COMMA'
+  - '&hrm_l_middle_tap DOT'
+  - '&hrm_l_middle_tap SEMI'
+  - '&hrm_l_middle_tap FSLH'
+  - '&hrm_l_middle_tap ENTER'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_middle_tap AMPS'
+  - '&hrm_l_middle_tap GRAVE'
+  - '&hrm_l_middle_tap BACKSLASH'
+  - '&hrm_l_middle_tap PLUS'
+  - Nav
+  - Kp
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  LRing:
+  - {t: ▽, type: trans}
+  - '&hrm_l_ring_tap N1'
+  - '&hrm_l_ring_tap N2'
+  - '&hrm_l_ring_tap N3'
+  - '&hrm_l_ring_tap N4'
+  - '&hrm_l_ring_tap N5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_ring_tap Q'
+  - '&hrm_l_ring_tap Y'
+  - '&hrm_l_ring_tap O'
+  - '&hrm_l_ring_tap U'
+  - '&hrm_l_ring_tap EQUAL'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_ring_tap B'
+  - {t: '&hrm_l_ring_tap C', h: ⇧}
+  - ''
+  - {t: '&hrm_l_ring_tap A', h: ⌥}
+  - {t: '&hrm_l_ring_tap E', h: ⌘}
+  - '&hrm_l_ring_tap MINUS'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_ring_tap APOS'
+  - '&hrm_l_ring_tap COMMA'
+  - '&hrm_l_ring_tap DOT'
+  - '&hrm_l_ring_tap SEMI'
+  - '&hrm_l_ring_tap FSLH'
+  - '&hrm_l_ring_tap ENTER'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_ring_tap AMPS'
+  - '&hrm_l_ring_tap GRAVE'
+  - '&hrm_l_ring_tap BACKSLASH'
+  - '&hrm_l_ring_tap PLUS'
+  - Nav
+  - Kp
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  LPinky:
+  - {t: ▽, type: trans}
+  - '&hrm_l_pinky_tap N1'
+  - '&hrm_l_pinky_tap N2'
+  - '&hrm_l_pinky_tap N3'
+  - '&hrm_l_pinky_tap N4'
+  - '&hrm_l_pinky_tap N5'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_pinky_tap Q'
+  - '&hrm_l_pinky_tap Y'
+  - '&hrm_l_pinky_tap O'
+  - '&hrm_l_pinky_tap U'
+  - '&hrm_l_pinky_tap EQUAL'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_pinky_tap B'
+  - ''
+  - {t: '&hrm_l_pinky_tap I', h: ⌃}
+  - {t: '&hrm_l_pinky_tap A', h: ⌥}
+  - {t: '&hrm_l_pinky_tap E', h: ⌘}
+  - '&hrm_l_pinky_tap MINUS'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_pinky_tap APOS'
+  - '&hrm_l_pinky_tap COMMA'
+  - '&hrm_l_pinky_tap DOT'
+  - '&hrm_l_pinky_tap SEMI'
+  - '&hrm_l_pinky_tap FSLH'
+  - '&hrm_l_pinky_tap ENTER'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_l_pinky_tap AMPS'
+  - '&hrm_l_pinky_tap GRAVE'
+  - '&hrm_l_pinky_tap BACKSLASH'
+  - '&hrm_l_pinky_tap PLUS'
+  - Nav
+  - Kp
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  RIndex:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_index_tap N6'
+  - '&hrm_r_index_tap N7'
+  - '&hrm_r_index_tap N8'
+  - '&hrm_r_index_tap N9'
+  - '&hrm_r_index_tap N0'
+  - '&hrm_r_index_tap LC(C)'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_index_tap X'
+  - '&hrm_r_index_tap L'
+  - '&hrm_r_index_tap D'
+  - '&hrm_r_index_tap P'
+  - '&hrm_r_index_tap Z'
+  - '&hrm_r_index_tap ENTER'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_index_tap DELETE'
+  - '&hrm_r_index_tap SPACE'
+  - {t: ▽, type: trans}
+  - '&hrm_r_index_tap K'
+  - ''
+  - {t: '&hrm_r_index_tap T', h: ⌥}
+  - {t: '&hrm_r_index_tap N', h: ⌃}
+  - {t: '&hrm_r_index_tap S', h: ⇧}
+  - '&hrm_r_index_tap W'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_index_tap ESCAPE'
+  - '&hrm_r_index_tap J'
+  - '&hrm_r_index_tap M'
+  - '&hrm_r_index_tap G'
+  - '&hrm_r_index_tap F'
+  - '&hrm_r_index_tap V'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_index_tap ENTER'
+  - Kp
+  - Nav
+  - '&hrm_r_index_tap LEFT'
+  - '&hrm_r_index_tap DOWN'
+  - '&hrm_r_index_tap UP'
+  - '&hrm_r_index_tap RIGHT'
+  - {t: ▽, type: trans}
+  RMiddle:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_middle_tap N6'
+  - '&hrm_r_middle_tap N7'
+  - '&hrm_r_middle_tap N8'
+  - '&hrm_r_middle_tap N9'
+  - '&hrm_r_middle_tap N0'
+  - '&hrm_r_middle_tap LC(C)'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_middle_tap X'
+  - '&hrm_r_middle_tap L'
+  - '&hrm_r_middle_tap D'
+  - '&hrm_r_middle_tap P'
+  - '&hrm_r_middle_tap Z'
+  - '&hrm_r_middle_tap ENTER'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_middle_tap DELETE'
+  - '&hrm_r_middle_tap SPACE'
+  - {t: ▽, type: trans}
+  - '&hrm_r_middle_tap K'
+  - {t: '&hrm_r_middle_tap H', h: ⌘}
+  - ''
+  - {t: '&hrm_r_middle_tap N', h: ⌃}
+  - {t: '&hrm_r_middle_tap S', h: ⇧}
+  - '&hrm_r_middle_tap W'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_middle_tap ESCAPE'
+  - '&hrm_r_middle_tap J'
+  - '&hrm_r_middle_tap M'
+  - '&hrm_r_middle_tap G'
+  - '&hrm_r_middle_tap F'
+  - '&hrm_r_middle_tap V'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_middle_tap ENTER'
+  - Kp
+  - Nav
+  - '&hrm_r_middle_tap LEFT'
+  - '&hrm_r_middle_tap DOWN'
+  - '&hrm_r_middle_tap UP'
+  - '&hrm_r_middle_tap RIGHT'
+  - {t: ▽, type: trans}
+  RRing:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_ring_tap N6'
+  - '&hrm_r_ring_tap N7'
+  - '&hrm_r_ring_tap N8'
+  - '&hrm_r_ring_tap N9'
+  - '&hrm_r_ring_tap N0'
+  - '&hrm_r_ring_tap LC(C)'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_ring_tap X'
+  - '&hrm_r_ring_tap L'
+  - '&hrm_r_ring_tap D'
+  - '&hrm_r_ring_tap P'
+  - '&hrm_r_ring_tap Z'
+  - '&hrm_r_ring_tap ENTER'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_ring_tap DELETE'
+  - '&hrm_r_ring_tap SPACE'
+  - {t: ▽, type: trans}
+  - '&hrm_r_ring_tap K'
+  - {t: '&hrm_r_ring_tap H', h: ⌘}
+  - {t: '&hrm_r_ring_tap T', h: ⌥}
+  - ''
+  - {t: '&hrm_r_ring_tap S', h: ⇧}
+  - '&hrm_r_ring_tap W'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_ring_tap ESCAPE'
+  - '&hrm_r_ring_tap J'
+  - '&hrm_r_ring_tap M'
+  - '&hrm_r_ring_tap G'
+  - '&hrm_r_ring_tap F'
+  - '&hrm_r_ring_tap V'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_ring_tap ENTER'
+  - Kp
+  - Nav
+  - '&hrm_r_ring_tap LEFT'
+  - '&hrm_r_ring_tap DOWN'
+  - '&hrm_r_ring_tap UP'
+  - '&hrm_r_ring_tap RIGHT'
+  - {t: ▽, type: trans}
+  RPinky:
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_pinky_tap N6'
+  - '&hrm_r_pinky_tap N7'
+  - '&hrm_r_pinky_tap N8'
+  - '&hrm_r_pinky_tap N9'
+  - '&hrm_r_pinky_tap N0'
+  - '&hrm_r_pinky_tap LC(C)'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_pinky_tap X'
+  - '&hrm_r_pinky_tap L'
+  - '&hrm_r_pinky_tap D'
+  - '&hrm_r_pinky_tap P'
+  - '&hrm_r_pinky_tap Z'
+  - '&hrm_r_pinky_tap ENTER'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_pinky_tap DELETE'
+  - '&hrm_r_pinky_tap SPACE'
+  - {t: ▽, type: trans}
+  - '&hrm_r_pinky_tap K'
+  - {t: '&hrm_r_pinky_tap H', h: ⌘}
+  - {t: '&hrm_r_pinky_tap T', h: ⌥}
+  - {t: '&hrm_r_pinky_tap N', h: ⌃}
+  - ''
+  - '&hrm_r_pinky_tap W'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_pinky_tap ESCAPE'
+  - '&hrm_r_pinky_tap J'
+  - '&hrm_r_pinky_tap M'
+  - '&hrm_r_pinky_tap G'
+  - '&hrm_r_pinky_tap F'
+  - '&hrm_r_pinky_tap V'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - '&hrm_r_pinky_tap ENTER'
+  - Kp
+  - Nav
+  - '&hrm_r_pinky_tap LEFT'
+  - '&hrm_r_pinky_tap DOWN'
+  - '&hrm_r_pinky_tap UP'
+  - '&hrm_r_pinky_tap RIGHT'
+  - {t: ▽, type: trans}

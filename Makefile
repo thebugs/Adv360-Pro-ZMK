@@ -9,7 +9,7 @@ SELINUX1 := :z
 SELINUX2 := ,z
 endif
 
-.PHONY: all left clean_firmware clean_image clean
+.PHONY: all left draw clean_firmware clean_image clean
 
 all:
 	$(shell bin/get_version_local.sh clique >> /dev/null)
@@ -34,6 +34,16 @@ left:
 		-e BUILD_RIGHT=false \
 		zmk
 	git checkout config/version.dtsi
+
+# Keymap drawing, finger_* layers (bilateral HRM internals) are skipped
+DRAWER := uvx --from keymap-drawer==0.23.0 keymap -c keymap_drawer.config.yaml
+
+draw:
+	mkdir -p keymap-drawer
+	$(DRAWER) parse -z config/adv360.keymap > keymap-drawer/adv360.yaml
+	$(DRAWER) draw keymap-drawer/adv360.yaml -z adv360 \
+		-s $$(sed -nE 's/^  ([A-Za-z0-9_]+):$$/\1/p' keymap-drawer/adv360.yaml | grep -vE '^[LR](Index|Middle|Ring|Pinky)$$') \
+		> keymap-drawer/adv360.svg
 
 clean_firmware:
 	rm -f firmware/*.uf2

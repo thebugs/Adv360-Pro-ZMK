@@ -9,6 +9,12 @@
 
 Certain ZMK features (e.g. combos) require knowing the exact key positions in the matrix. They can be found in both image and text format [here](assets/key-positions.md)
 
+### Keymap drawing
+
+![Keymap](keymap-drawer/adv360.svg)
+
+Drawn with [keymap-drawer](https://github.com/caksoylar/keymap-drawer) and committed by CI on every keymap change. Labels are set in `keymap_drawer.config.yaml`. To preview locally (needs [uv](https://docs.astral.sh/uv/)) run `make draw`.
+
 ### Bilateral home row mods
 
 Home row mods use sunaku's bilateral HRM scheme (as in Glorious Engrammer / TailorKey). Holding a home row mod activates a per-finger layer (`finger_*`, always the last layers) where same-hand keys type normally instead of being modded, and other same-hand home keys stack mods. Same-side thumbs count as same hand.

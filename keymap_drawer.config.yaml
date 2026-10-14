@@ -1,0 +1,159 @@
+# keymap-drawer config: https://github.com/caksoylar/keymap-drawer
+# Render locally with `make draw`, CI renders keymap-drawer/adv360.svg on push
+draw_config:
+  footer_text: Kinesis Advantage 360 Pro · Enthium + bilateral HRMs
+parse_config:
+  modifier_fn_map:
+    left_ctrl: ⌃
+    right_ctrl: ⌃
+    left_shift: ⇧
+    right_shift: ⇧
+    left_alt: ⌥
+    right_alt: ⌥
+    left_gui: ⌘
+    right_gui: ⌘
+    keycode_combiner: '{mods}{key}'
+    mod_combiner: '{mod_1}{mod_2}'
+    special_combinations:
+      left_ctrl+left_alt+left_gui+left_shift: Hyper
+      left_ctrl+left_alt+left_shift: Meh
+  raw_binding_map:
+    # HRM holds are macros (mod + finger layer), label them by mod
+    '&hrm_l_pinky_hold LEFT_SHIFT': ⇧
+    '&hrm_l_ring_hold LCTRL': ⌃
+    '&hrm_l_middle_hold LEFT_ALT': ⌥
+    '&hrm_l_index_hold LEFT_GUI': ⌘
+    '&hrm_r_index_hold RIGHT_GUI': ⌘
+    '&hrm_r_middle_hold RIGHT_ALT': ⌥
+    '&hrm_r_ring_hold RCTRL': ⌃
+    '&hrm_r_pinky_hold RIGHT_SHIFT': ⇧
+    '&sk LS(LA(LC(LEFT_GUI)))': {t: Hyper, h: sticky}
+    '&sk LS(LA(LCTRL))': {t: Meh, h: sticky}
+    '&caps_word': Caps word
+    '&macro_ver': Version
+    '&studio_unlock': Studio unlock
+    '&bootloader': Boot
+  zmk_keycode_map:
+    EXCLAMATION: '!'
+    EXCL: '!'
+    AT_SIGN: '@'
+    AT: '@'
+    HASH: '#'
+    POUND: '#'
+    DOLLAR: $
+    DLLR: $
+    PERCENT: '%'
+    PRCNT: '%'
+    CARET: ^
+    AMPERSAND: '&'
+    AMPS: '&'
+    ASTERISK: '*'
+    ASTRK: '*'
+    STAR: '*'
+    LEFT_PARENTHESIS: (
+    LPAR: (
+    RIGHT_PARENTHESIS: )
+    RPAR: )
+    EQUAL: '='
+    PLUS: +
+    MINUS: '-'
+    UNDERSCORE: _
+    UNDER: _
+    SLASH: /
+    FSLH: /
+    QUESTION: '?'
+    QMARK: '?'
+    BACKSLASH: \
+    BSLH: \
+    PIPE: '|'
+    NON_US_BACKSLASH: \
+    PIPE2: '|'
+    NON_US_BSLH: '|'
+    SEMICOLON: ;
+    SEMI: ;
+    COLON: ':'
+    SINGLE_QUOTE: ''''
+    SQT: ''''
+    APOSTROPHE: ''''
+    APOS: ''''
+    DOUBLE_QUOTES: '"'
+    DQT: '"'
+    COMMA: ','
+    LESS_THAN: <
+    LT: <
+    PERIOD: .
+    DOT: .
+    GREATER_THAN: '>'
+    GT: '>'
+    LEFT_BRACKET: '['
+    LBKT: '['
+    LEFT_BRACE: '{'
+    LBRC: '{'
+    RIGHT_BRACKET: ']'
+    RBKT: ']'
+    RIGHT_BRACE: '}'
+    RBRC: '}'
+    GRAVE: '`'
+    TILDE: '~'
+    NON_US_HASH: '#'
+    NUHS: '#'
+    TILDE2: '~'
+    LEFT_GUI: ⌘
+    RIGHT_GUI: ⌘
+    LGUI: ⌘
+    RGUI: ⌘
+    LEFT_ALT: ⌥
+    RIGHT_ALT: ⌥
+    LALT: ⌥
+    RALT: ⌥
+    LCTRL: ⌃
+    RCTRL: ⌃
+    LEFT_SHIFT: ⇧
+    RIGHT_SHIFT: ⇧
+    LSHFT: ⇧
+    RSHFT: ⇧
+    SPACE: ␣
+    BSPC: ⌫
+    DELETE: ⌦
+    DEL: ⌦
+    ENTER: ⏎
+    ESCAPE: Esc
+    ESC: Esc
+    TAB: ⇥
+    CAPS: ⇪
+    LEFT: ←
+    RIGHT: →
+    UP: ↑
+    DOWN: ↓
+    HOME: Home
+    END: End
+    PG_UP: PgUp
+    PG_DN: PgDn
+    KP_NUM: NumLk
+    KP_N0: '0'
+    KP_N1: '1'
+    KP_N2: '2'
+    KP_N3: '3'
+    KP_N4: '4'
+    KP_N5: '5'
+    KP_N6: '6'
+    KP_N7: '7'
+    KP_N8: '8'
+    KP_N9: '9'
+    KP_DOT: .
+    KP_PLUS: +
+    KP_MINUS: '-'
+    KP_MULTIPLY: '*'
+    KP_DIVIDE: /
+    KP_EQUAL: '='
+    KP_ENTER: ⏎
+    C_VOLUME_UP: Vol+
+    C_VOLUME_DOWN: Vol−
+    K_MUTE: Mute
+    C_PP: ⏯
+    C_NEXT: ⏭
+    C_PREV: ⏮
+    RGB_TOG: RGB
+    BL_TOG: Light
+    BL_INC: Light+
+    BL_DEC: Light−
