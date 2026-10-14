@@ -8,7 +8,7 @@ From those the script (re)writes:
   - hrm_<h>_<f>            base hold-taps (timings kept if node already exists)
   - hrm_<h>_<f>_<f2>       chord hold-taps for same-hand mod stacking
   - hrm_<h>_<f>_hold/_tap  macros
-  - finger_<h>_<f>         finger layers, always appended as the last layers
+  - finger_<h>_<f>         finger layers, regenerated in place (appended on first run)
 
 Run after changing base layer keys or HRM timings in Keymap Editor:
     python3 scripts/gen_bhrm.py [path/to/adv360.keymap]
@@ -147,9 +147,9 @@ def main():
     layers = list(children(text, km_open, km_close))
     names = [layer[0] for layer in layers]
     finger_idx = [i for i, n in enumerate(names) if FINGER_LAYER_RE.match(n)]
-    if finger_idx and finger_idx != list(range(len(names) - len(finger_idx), len(names))):
-        sys.exit("finger_* layers must be the last layers; move other layers above them in Keymap Editor first")
-    user_layers = len(names) - len(finger_idx)
+    if finger_idx and finger_idx != list(range(finger_idx[0], finger_idx[0] + len(finger_idx))):
+        sys.exit("finger_* layers must be next to each other; move other layers out from between them first")
+    first_finger = finger_idx[0] if finger_idx else len(names)
     base = split_bindings(text[layers[0][3]:layers[0][4]])
     if len(base) != 76:
         sys.exit(f"base layer has {len(base)} bindings, expected 76")
@@ -186,7 +186,7 @@ def main():
         name = f"hrm_{hand}_{finger}"
         other = "r" if hand == "l" else "l"
         triggers = sorted(HAND[other]["keys"] + HAND[other]["thumbs"])
-        layer = user_layers + i
+        layer = first_finger + i
         timing = timings[(hand, finger)]
 
         behaviors.append(hold_tap(name, timing, triggers, f"<&{name}_hold>, <&kp>"))
@@ -228,14 +228,19 @@ def main():
             f"        }};"
         )
 
+    # Finger layers are replaced in place so layers after them keep their indexes
+    if finger_idx:
+        start, end = layers[finger_idx[0]][2], layers[finger_idx[-1]][4]
+        text = text[:start] + "\n\n".join(finger_layers) + text[end:]
+
     # Drop previously generated nodes, back to front so offsets stay valid
     removals = []
-    for block in ("behaviors", "macros", "keymap"):
+    for block in ("behaviors", "macros"):
         b = root_block(text, block)
         if not b:
             continue
         for name, label, start, _, end in children(text, b[1], b[2]):
-            if GENERATED_NODE_RE.match(label or name) or FINGER_LAYER_RE.match(name):
+            if GENERATED_NODE_RE.match(label or name):
                 removals.append((start, end))
     for start, end in sorted(removals, reverse=True):
         stop = end + 1 if text[end:end + 1] == "\n" else end
@@ -252,13 +257,14 @@ def main():
         _, _, bh_close = root_block(text, "behaviors")
         text = text[:bh_close] + "\n\n    macros {\n    };" + text[bh_close:]
     text = append_to(text, "macros", "\n\n".join(macros))
-    text = append_to(text, "keymap", "\n\n".join(finger_layers))
+    if not finger_idx:
+        text = append_to(text, "keymap", "\n\n".join(finger_layers))
     text = re.sub(r"\{\n\n+", "{\n", text)
     text = re.sub(r"\n\n+(\s*\};)", r"\n\1", text)
     text = re.sub(r"\n[ \t]*\n([ \t]*\n)+", "\n\n", text)
 
     KEYMAP.write_text(text)
-    print(f"{len(hrms)} HRMs, finger layers {user_layers}-{user_layers + len(hrms) - 1}")
+    print(f"{len(hrms)} HRMs, finger layers {first_finger}-{first_finger + len(hrms) - 1}")
 
 
 if __name__ == "__main__":

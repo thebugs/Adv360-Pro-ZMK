@@ -33,6 +33,17 @@ parse_config:
     '&macro_ver': Version
     '&studio_unlock': Studio unlock
     '&bootloader': Boot
+    '&mmv MOVE_LEFT': {t: ←, h: move}
+    '&mmv MOVE_DOWN': {t: ↓, h: move}
+    '&mmv MOVE_UP': {t: ↑, h: move}
+    '&mmv MOVE_RIGHT': {t: →, h: move}
+    '&msc SCRL_UP': {t: ⇞, h: scroll}
+    '&msc SCRL_DOWN': {t: ⇟, h: scroll}
+    '&msc SCRL_LEFT': {t: ⇠, h: scroll}
+    '&msc SCRL_RIGHT': {t: ⇢, h: scroll}
+    '&mkp LCLK': {t: Left, h: click}
+    '&mkp RCLK': {t: Right, h: click}
+    '&mkp MCLK': {t: Middle, h: click}
   zmk_keycode_map:
     EXCLAMATION: '!'
     EXCL: '!'

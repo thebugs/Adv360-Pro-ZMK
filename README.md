@@ -17,7 +17,7 @@ Drawn with [keymap-drawer](https://github.com/caksoylar/keymap-drawer) and commi
 
 ### Bilateral home row mods
 
-Home row mods use sunaku's bilateral HRM scheme (as in Glorious Engrammer / TailorKey). Holding a home row mod activates a per-finger layer (`finger_*`, always the last layers) where same-hand keys type normally instead of being modded, and other same-hand home keys stack mods. Same-side thumbs count as same hand.
+Home row mods use sunaku's bilateral HRM scheme (as in Glorious Engrammer / TailorKey). Holding a home row mod activates a per-finger layer (`finger_*`) where same-hand keys type normally instead of being modded, and other same-hand home keys stack mods. Same-side thumbs count as same hand.
 
 Base layer HRM keys are bound as `&hrm_<l|r>_<index|middle|ring|pinky> MOD KEY`. After changing base layer keys, or HRM timings on the `hrm_<l|r>_<finger>` behaviors, regenerate the rest:
 
@@ -25,7 +25,7 @@ Base layer HRM keys are bound as `&hrm_<l|r>_<index|middle|ring|pinky> MOD KEY`.
 python3 scripts/gen_bhrm.py
 ```
 
-New layers added in the keymap editor must be moved above the `finger_*` layers.
+The `finger_*` layers must stay next to each other; other layers can go before or after them. Layers after them (e.g. Mouse) take priority, so their keys win over finger layers.
 
 ## Building the Firmware with GitHub Actions
 

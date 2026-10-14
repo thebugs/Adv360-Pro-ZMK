@@ -3,6 +3,7 @@
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
 / {
@@ -542,11 +543,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&tog 4     &kp N1             &kp N2        &kp N3           &kp N4           &kp N5     &tog 2                                                                              &mo 5    &kp N6  &kp N7            &kp N8            &kp N9        &kp N0              &kp LC(C)
-&gresc     &kp Q              &kp Y         &kp O            &kp U            &kp EQUAL  &none                                                                               &none    &kp X   &kp L             &kp D             &kp P         &kp Z               &kp ENTER
-&kp B      &hrm_l_pinky LEFT_SHIFT C  &hrm_l_ring LCTRL I  &hrm_l_middle LEFT_ALT A  &hrm_l_index LEFT_GUI E  &kp MINUS  &none      &sk LS(LA(LC(LEFT_GUI)))  &sk LEFT_GUI           &kp DELETE   &kp SPACE  &none    &kp K   &hrm_r_index RIGHT_GUI H  &hrm_r_middle RIGHT_ALT T  &hrm_r_ring RCTRL N  &hrm_r_pinky RIGHT_SHIFT S  &kp W
-&sk LSHFT  &kp APOS           &kp COMMA     &kp DOT          &kp SEMI         &kp FSLH                                        &kp ENTER              &kp ESCAPE                       &kp J   &kp M             &kp G             &kp F         &kp V               &sk RSHFT
-&mo 3      &kp AMPS           &kp GRAVE     &kp BACKSLASH    &kp PLUS                    &thumb 1 SPACE  &thumb 2 TAB         &sk LS(LA(LCTRL))      &kp ENTER    &thumb 2 BSPC  &thumb 1 R         &kp LEFT          &kp DOWN          &kp UP        &kp RIGHT           &mo 3
+&tog 4                      &kp N1                      &kp N2                      &kp N3                      &kp N4                      &kp N5                      &tog 2                      &mo 5                       &kp N6                      &kp N7                      &kp N8                      &kp N9                      &kp N0                      &kp LC(C)
+&gresc                      &kp Q                       &kp Y                       &kp O                       &kp U                       &kp EQUAL                   &tog 14                     &none                       &kp X                       &kp L                       &kp D                       &kp P                       &kp Z                       &kp ENTER
+&kp B                       &hrm_l_pinky LEFT_SHIFT C   &hrm_l_ring LCTRL I         &hrm_l_middle LEFT_ALT A    &hrm_l_index LEFT_GUI E     &kp MINUS                   &mo 14                      &sk LS(LA(LC(LEFT_GUI)))    &sk LEFT_GUI                &kp DELETE                  &kp SPACE                   &none                       &kp K                       &hrm_r_index RIGHT_GUI H    &hrm_r_middle RIGHT_ALT T   &hrm_r_ring RCTRL N         &hrm_r_pinky RIGHT_SHIFT S  &kp W
+&sk LSHFT                   &kp APOS                    &kp COMMA                   &kp DOT                     &kp SEMI                    &kp FSLH                    &kp ENTER                   &kp ESCAPE                  &kp J                       &kp M                       &kp G                       &kp F                       &kp V                       &sk RSHFT
+&mo 3                       &kp AMPS                    &kp GRAVE                   &kp BACKSLASH               &kp PLUS                    &thumb 1 SPACE              &thumb 2 TAB                &sk LS(LA(LCTRL))           &kp ENTER                   &thumb 2 BSPC               &thumb 1 R                  &kp LEFT                    &kp DOWN                    &kp UP                      &kp RIGHT                   &mo 3
             >;
         };
 
@@ -692,6 +693,16 @@
                 &trans                           &trans                           &trans                           &trans                           &trans                           &trans                           &trans                           &trans                           &trans                           &hrm_r_pinky_tap DELETE          &hrm_r_pinky_tap SPACE           &trans                           &hrm_r_pinky_tap K               &hrm_r_pinky_index RIGHT_GUI H   &hrm_r_pinky_middle RIGHT_ALT T  &hrm_r_pinky_ring RCTRL N        &none                            &hrm_r_pinky_tap W
                 &trans                           &trans                           &trans                           &trans                           &trans                           &trans                           &trans                           &hrm_r_pinky_tap ESCAPE          &hrm_r_pinky_tap J               &hrm_r_pinky_tap M               &hrm_r_pinky_tap G               &hrm_r_pinky_tap F               &hrm_r_pinky_tap V               &trans
                 &trans                           &trans                           &trans                           &trans                           &trans                           &trans                           &trans                           &trans                           &hrm_r_pinky_tap ENTER           &mo 2                            &mo 1                            &hrm_r_pinky_tap LEFT            &hrm_r_pinky_tap DOWN            &hrm_r_pinky_tap UP              &hrm_r_pinky_tap RIGHT           &trans
+            >;
+        };
+        mouse {
+            display-name = "Mouse";
+            bindings = <
+                &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
+                &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &mmv MOVE_RIGHT  &msc SCRL_UP     &trans           &trans           &trans
+                &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &mmv MOVE_UP     &mmv MOVE_LEFT   &msc SCRL_LEFT   &msc SCRL_RIGHT  &trans           &trans
+                &trans           &trans           &trans           &trans           &trans           &trans           &mkp MCLK        &trans           &mmv MOVE_DOWN   &trans           &msc SCRL_DOWN   &trans           &trans           &trans
+                &trans           &trans           &trans           &trans           &trans           &mkp LCLK        &mkp RCLK        &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans           &trans
             >;
         };
     };
